@@ -13,7 +13,7 @@ function App() {
         <h4>Tron Network:</h4>
         <h4>State:</h4>
         </div>
-      <footer><p>V 0.08 / 2021 &copy; IBNZ DEVELOPERS</p></footer>
+      <footer><p>V 0.01 / 2021 &copy; IBNZ DEVELOPERS</p></footer>
       </div>
     </div>
   );
