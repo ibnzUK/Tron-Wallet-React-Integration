@@ -34,5 +34,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [
+    "react",
+    "tronlink",
+    "integration",
+    "example",
+    "tron",
+    "trx",
+    "blockchain",
+    "tronweb",
+    "wallet",
+    "cryptocurrency",
+    "crypto",
+    "solidity"
+  ],
+  "author": "Justinas Kairys",
+  "license": "ISC"
 }
