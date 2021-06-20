@@ -1,5 +1,5 @@
 # TRONLINK REACT INTEGRATION
 
-![Preview](src/screenshot.png)
+![Preview](src/Screenshot.png)
 
 ## Available Scripts
