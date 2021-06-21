@@ -35,12 +35,13 @@
       "last 1 safari version"
     ]
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "TRON WALLET & REACT INTEGRATION",
   "main": "index.js",
   "devDependencies": {},
   "keywords": [
     "react",
     "tronlink",
+    "klever",
     "integration",
     "example",
     "tron",
@@ -51,6 +52,7 @@
     "cryptocurrency",
     "crypto",
     "solidity"
+   
   ],
   "author": "Justinas Kairys",
   "license": "ISC"
