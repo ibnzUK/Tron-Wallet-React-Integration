@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from 'react';
 import './App.css';
+import logo from './logo.svg';
 
 function App() {
   const [myMessage, setMyMessage] = useState(<h3> LOADING.. </h3>);
@@ -109,19 +110,26 @@ function App() {
     <div className="App">
       <div className="Card">
         <h1> TRON WALLET & REACT INTEGRATION </h1>
+        <div className="Logo">
+        <img
+          src={logo}
+          alt="logo"
+        />
+
+        </div>
         <div className="Stats">
           {myMessage}
           <h4>Account Name: {myDetails.name} </h4>
-          <h4>My address: {myDetails.address}</h4>
+          <h4>My Address: {myDetails.address}</h4>
           <h4>
-            TRX Balance: {myDetails.balance} TRX (Frozen:{' '}
+            Balance: {myDetails.balance} TRX (Frozen:{' '}
             {myDetails.frozenBalance} TRX)
           </h4>
-          <h4>Tron Network: {myDetails.network}</h4>
-          <h4>Link established: {myDetails.link}</h4>
+          <h4>Network Selected: {myDetails.network}</h4>
+          <h4>Link Established: {myDetails.link}</h4>
         </div>
         <footer>
-          <p>V 0.02 / 2021 &copy; IBNZ DEVELOPERS</p>
+          <p>V 0.03 / 2021 &copy; IBNZ DEVELOPERS</p>
         </footer>
       </div>
     </div>
