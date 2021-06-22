@@ -31,21 +31,36 @@ function App() {
         let tempBalance = await getBalance();
         let tempFrozenBalance = 0;
 
+        //checking if any frozen balance exists
         if (
           !tempBalance.frozen &&
           !tempBalance.account_resource.frozen_balance_for_energy
         ) {
+          tempFrozenBalance = 0;
         } else {
-          if (tempBalance.account_resource.frozen_balance_for_energy) {
+          if (
+            tempBalance.frozen &&
+            tempBalance.account_resource.frozen_balance_for_energy
+          ) {
             tempFrozenBalance =
-              tempBalance.account_resource.frozen_balance_for_energy;
-          } else if (tempBalance.frozen) {
-            tempFrozenBalance = tempBalance.frozen[0].frozen_balance;
-          } else {
-            tempFrozenBalance =
-              tempBalance.account_resource.frozen_balance_for_energy +
-              tempBalance.frozen[0].frozen_balance;
+              tempBalance.frozen[0].frozen_balance +
+              tempBalance.account_resource.frozen_balance_for_energy
+                .frozen_balance;
           }
+          if (
+            tempBalance.frozen &&
+            !tempBalance.account_resource.frozen_balance_for_energy
+          ) {
+            tempFrozenBalance = tempBalance.frozen[0].frozen_balance;
+          }
+          if (
+            !tempBalance.frozen &&
+            tempBalance.account_resource.frozen_balance_for_energy
+          ) {
+            tempFrozenBalance =
+              tempBalance.account_resource.frozen_balance_for_energy
+                .frozen_balance;
+          } 
         }
 
         //we have wallet and we are logged in
