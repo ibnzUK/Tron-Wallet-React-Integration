@@ -31,6 +31,10 @@ function App() {
         let tempBalance = await getBalance();
         let tempFrozenBalance = 0;
 
+        if (!tempBalance.balance) {
+          tempBalance.balance = 0;
+        }
+
         //checking if any frozen balance exists
         if (
           !tempBalance.frozen &&
@@ -60,7 +64,7 @@ function App() {
             tempFrozenBalance =
               tempBalance.account_resource.frozen_balance_for_energy
                 .frozen_balance;
-          } 
+          }
         }
 
         //we have wallet and we are logged in
@@ -93,12 +97,9 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(async () => {
-      //
       getWalletDetails();
-
       //wallet checking interval 2sec
     }, 2000);
-
     return () => {
       clearInterval(interval);
     };
